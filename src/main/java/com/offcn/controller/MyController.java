@@ -14,6 +14,7 @@ public class MyController {
     public String index(Model model){
         String message = "thymeleaf thymeleaf";
         model.addAttribute("message",message);
+        System.out.println(1);
         return "index";
     }
 

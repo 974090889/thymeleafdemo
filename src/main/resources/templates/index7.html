@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+时间格式化：<span th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></span><br>
+<p th:text="${#strings.abbreviate(str,10)}"></p>
+<span th:if="${!#strings.isEmpty(str2)}">222</span><br>
+<p th:text="${#strings.substring(str2,1,4)}"></p>
+</body>
+</html>

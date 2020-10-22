@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table width="300px" style="text-align: center">
+        <tr>
+            <td>序号</td>
+            <td>id</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </tr>
+        <tr th:each="user,iterstat:${list}">
+            <!--<td th:text="${iterstat.index+1}"></td>--> <!-- 从0开始 -->
+            <!--<td th:text="${iterstat.count}"></td>-->   <!-- 从1开始 -->
+            <td th:text="${iterstat.size}"></td>    <!-- 集合大小 -->
+            <td th:text="${iterstat.current}"></td> <!-- 当前对象 -->
+            <td th:text="${iterstat.even}"></td>
+            <td th:text="${iterstat.odd}"></td>
+            <td th:text="${iterstat.first}"></td>
+            <td th:text="${iterstat.last}"></td>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+        </tr>
+    </table>
+</body>
+</html>
